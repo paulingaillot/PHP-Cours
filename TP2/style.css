@@ -1,0 +1,23 @@
+
+table {
+    border-collapse: collapse;
+    align-content: center;
+}
+
+td {
+        border-width:1px; 
+        border-style:solid; 
+        border-color:black;
+        align-items: center;
+        align-self: center;
+ }
+
+tr {
+            margin: 0px;
+            border-width:1px; 
+            border-style:solid; 
+            border-color:black;
+            align-items: center;
+            align-self: center;
+
+}
