@@ -114,6 +114,33 @@ echo $res;
 <hr>
 <h2>Exercice 4</h2>
 <h3>Question 1</h3>
+<?php
 
+$tab = array("Vernerie" => "Qu'est ce que je peux vous donner en exemple sans tout péter", "Freixas" => "J'ai plus de cerveau", "Valentin" => "Quoi, Quoi, Quoi ?", "Noémie" => "Ouiiiiiiiiiii !!!!!", "Pierre" => "Nan");
+
+foreach ($tab as $key => $value) {
+    echo $key." => ".$value."<br>";
+}
+
+?>
+<hr>
+<h2>Exercice 5</h2>
+<h3>Question 1</h3>
+<?php 
+
+    $nb = rand(0,200000000);
+    echo "<table id='exo5'><caption>Table de multiplication de ".$nb."</caption>";
+
+
+    for($i=0; $i<=10; $i++) {
+        echo "<tr>";
+        echo "<td> ".$i."*".$nb."</td>";
+        echo "<td> ".$i*$nb."</td>";
+        echo "</tr>";
+    }
+
+    echo "</table>";
+
+?>
 </body>
 </html>

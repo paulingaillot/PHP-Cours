@@ -4,20 +4,16 @@ table {
     align-content: center;
 }
 
-td {
-        border-width:1px; 
-        border-style:solid; 
-        border-color:black;
-        align-items: center;
-        align-self: center;
- }
-
-tr {
-            margin: 0px;
+td , tr {
+            
             border-width:1px; 
             border-style:solid; 
             border-color:black;
-            align-items: center;
-            align-self: center;
+            padding: 5px;
 
+}
+
+.exo4 {
+
+    align-content: center;
 }
