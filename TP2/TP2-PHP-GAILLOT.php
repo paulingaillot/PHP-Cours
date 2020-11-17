@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="style.css">
 </header>
 <body>
-<h1> TP 1</h1>
+<h1> TP 2</h1>
 <hr>
 <h2>Exercice 1</h2>
 <h3>Question 1</h3>
@@ -71,8 +71,8 @@ $i = 0;
 do {
         $i++;
         if($i>=2)$tab['F'.$i] = $tab['F'.($i-1)] + $tab['F'.($i-2)];
-        echo "F".$i."/F".($i-1)." : ".$tab["F".$i]/$tab["F".($i-1)];
-        echo "<br>";
+        if($i>=2)echo "F".$i."/F".($i-1)." : ".$tab["F".$i]/$tab["F".($i-1)];
+        if($i>=2)echo "<br>";
 }
 while($i <30) ;
 
@@ -129,7 +129,7 @@ foreach ($tab as $key => $value) {
 <?php 
 
     $nb = rand(0,200000000);
-    echo "<table id='exo5'><caption>Table de multiplication de ".$nb."</caption>";
+    echo "<table id='exo5'><tr><td colspan=2>Table de multiplication de ".$nb."</td></tr>";
 
 
     for($i=0; $i<=10; $i++) {
@@ -140,6 +140,65 @@ foreach ($tab as $key => $value) {
     }
 
     echo "</table>";
+
+?>
+<hr>
+<h2>Exercice 6</h2>
+<h3>Question 1</h3>
+<?php 
+
+    for($i=1;$i<=98; $i++){
+        $prem = true;
+        $res = sqrt($i);
+        for($j=2;$j<=$res; $j++){
+            $res1 = ($i/$j);
+            if($i%$j==0)$prem = false;
+        }
+        if($prem == true) echo $i." ";
+
+    }
+
+?>
+<hr>
+<h2>Exercice 7</h2>
+<h3>Question 1</h3>
+<?php 
+    $nb = rand(0,999);
+    $nb2 = rand(0,5);
+
+    if($nb2 == 0) $entry = $nb."";
+    if($nb2 == 1) $entry = $nb."K";
+    if($nb2 == 2) $entry = $nb."M";
+    if($nb2 == 3) $entry = $nb."G";
+    if($nb2 == 4) $entry = $nb."T";
+    if($nb2 == 5) $entry = $nb."P";
+
+    if($entry[strlen($entry)-1] == "K" || $entry[strlen($entry)-1] == "M" || $entry[strlen($entry)-1] == "G" ||
+    $entry[strlen($entry)-1] == "T" || $entry[strlen($entry)-1] == "P") {
+        $entry2 = substr($entry, 0, strlen($entry)-1);
+        $value = $entry[strlen($entry)-1];
+    } else {
+        $entry2 = $entry;
+        $value = "";
+    } 
+
+    $res = $entry." = ".$entry2;
+    switch ($value) {
+        case "P":
+            $res =  $res." x 1024";
+        case "T":
+            $res =  $res." x 1024";
+        case "G":
+            $res =  $res." x  1024";
+        case "M":
+            $res =  $res." x  1024";
+        case "K":
+            $res =  $res." x  1024";
+        default :
+        break;
+
+    }
+    echo $res;
 
 ?>
 </body>

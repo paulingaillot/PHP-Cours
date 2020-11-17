@@ -1,0 +1,19 @@
+
+.center-div  {
+    margin: 0 auto; 
+    margin-top: 5%;
+    width: 125px;
+}
+
+h2 {
+    margin-top: 20%;
+    text-align: center;
+
+}
+
+body {
+    text-size-adjust: inherit;
+    background-image: url("image.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+}
