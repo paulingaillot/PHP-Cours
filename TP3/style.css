@@ -1,23 +1,22 @@
 
 table {
-    border-collapse: collapse;
     align-content: center;
-}
-
-caption {
-
     border-width:1px; 
     border-style:solid; 
     border-color:black;
-    padding: 5px;
+    border-collapse: separate;
+    width:50%;
 }
 
-td , tr, th {
+.table2 {
+    border-collapse: collapse;
+}
+
+td, tr, th {
             
-            border-width:1px; 
-            border-style:solid; 
-            border-color:black;
-            padding: 5px;
+    border-width:1px;
+    border-style:solid; 
+    width:50%;
 
 }
 

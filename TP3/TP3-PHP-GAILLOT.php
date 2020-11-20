@@ -9,9 +9,15 @@
 <h2>Exercice 1</h2>
 <h3>Question 1</h3>
 <?php
-    static $res =0;
+    $var =0;
     function increment() {
-        $res++;
+        global $var;
+        $var++;
+    }
+
+    for( $i=0; $i<5; $i++) {
+        increment();
+        echo $var." ";
     }
 
 ?>
@@ -23,6 +29,12 @@
     function increment2($res) {
         $res++;
         return $res;
+    }
+
+    $res2 = 0;
+    while($res2 < 10) {
+        $res2 = increment2($res2);
+        echo $res2." ";
     }
 
     
@@ -45,7 +57,7 @@ function mail1($mail) {
 
     $domain = strstr($mail, '@');
     $post = strstr($domain, '.');
-    $domain = substr($domain, 1, strpos ($domain, '.'));
+    $domain = substr($domain, 1, strpos ($domain, '.')-1);
     $post = substr($post, 1);
 
     $res = $arrayName = array("" ,"" );
@@ -64,16 +76,16 @@ mail1($mail[0]);
 <?php
 
 function test($identite, $age, $mail) {
-    $alea1 = rand(0,3);
-    $alea2 = rand(0,3);
-    $alea3 = rand(0,3);
+    $alea1 = rand(0,sizeof($identite)-1);
+    $alea2 = rand(0,sizeof($age)-1);
+    $alea3 = rand(0,sizeof($mail)-1);
 
     $val = mail1($mail[$alea3]);
 
     if($age[$alea2] == 1) $mess = $age[$alea2]." an";
     else $mess = $age[$alea2]." ans";
 
-    echo "je me nomme ".$identite[$alea1]." j'ai ".$mess." et mon mail est ".$mail[$alea3]." du domaine ".$val[0]." avec l'extension ".$val[1];
+    echo "je me nomme ".ucfirst($identite[$alea1])." j'ai ".$mess." et mon mail est ".$mail[$alea3]." du domaine ".$val[0]." avec l'extension ".$val[1];
 }
 
 test($identite, $age, $mail);
@@ -336,7 +348,7 @@ $annuaire=array(
     "WINNINGER Bénédicte"=>"04 16 14 86 66");
 
     ksort($annuaire);
-    echo "<table>";
+    echo "<table class=\"table2\">";
     foreach($annuaire as $key => $value) {
         echo "<tr>";
         echo "<td>".$key."</td>";
@@ -368,7 +380,7 @@ $annuaire=array(
     $A5 = true;
     $A6 = true;
 
-    isOn($A1, $A2, $A3, $A4, $A5, $A6);
+    echo isOn($A1, $A2, $A3, $A4, $A5, $A6);
 
 ?>
 
@@ -448,9 +460,8 @@ function validate($value) {
     else return false;
 }
 
-    echo "Result = ".(int)validate([9,7,2,4,8,7,0,8,6]);
+    echo "Result = ".(int)validate([rand(0,9),rand(0,9),rand(0,9),rand(0,9),rand(0,9),rand(0,9),rand(0,9),rand(0,9),rand(0,9)]);
     echo "<br>";
-    echo "Result = ".(int)validate([9,7,2,4,8,7,0,8,1]);
 
 ?>
 

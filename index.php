@@ -16,6 +16,7 @@ foreach ( $files2 as $file){
   if(strpos($file, "TP") !== false) {
     echo "<a class=\"center-div\" href=\"",$file,"/",$file,"-PHP-GAILLOT.php\"><button class=\" center-div alert btn btn-primary \">";
     echo $file;
+    echo " <span class=\"badge badge-light \">".(substr_count(fread(fopen("./".$file."/".$file."-PHP-GAILLOT.php", 'rb'), filesize("./".$file."/".$file."-PHP-GAILLOT.php")), "h2",)/2)." Exos</span>";
     echo "</button></a><br />";
   }
 

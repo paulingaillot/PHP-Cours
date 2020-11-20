@@ -2,7 +2,12 @@
 .center-div  {
     margin: 0 auto; 
     margin-top: 5%;
-    width: 125px;
+    width: 200px;
+    font-weight: bolder;
+}
+
+span  {
+    margin-left: 20px;
 }
 
 h2 {
@@ -11,9 +16,15 @@ h2 {
 
 }
 
+a, button {
+    font-weight: bolder;
+}
+
+
 body {
     text-size-adjust: inherit;
     background-image: url("image.jpg");
     background-repeat:no-repeat;
     background-size: cover;
+    font-weight: bolder;
 }
