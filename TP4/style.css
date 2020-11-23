@@ -1,0 +1,26 @@
+
+table {
+    align-content: center;
+    border-width:1px; 
+    border-style:solid; 
+    border-color:black;
+    border-collapse: separate;
+    width:50%;
+}
+
+.table2 {
+    border-collapse: collapse;
+}
+
+td, tr, th {
+            
+    border-width:1px;
+    border-style:solid; 
+    width:50%;
+
+}
+
+.exo4 {
+
+    align-content: center;
+}
