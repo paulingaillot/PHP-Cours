@@ -225,7 +225,8 @@
         protected $color;
         protected $masse;
 
-        function getMasse() {
+        function getMasse()
+        {
             return $this->masse;
         }
     }
@@ -234,56 +235,70 @@
     {
         private $diametre;
 
-        function __construct($diam, $color, $masse) {
+        function __construct($diam, $color, $masse)
+        {
             $this->diametre = $diam;
             $this->masse = $masse;
             $this->color = $color;
         }
 
-        function affichage() {
-            echo "* ".get_class($this)." ".$this->color." de ".$this->diametre."cm de diamètre pesant ".$this->masse."g";
+        function affichage()
+        {
+            echo "* " . get_class($this) . " " . $this->color . " de " . $this->diametre . "cm de diamètre pesant " . $this->masse . "g";
         }
-
     }
 
-    class Guirlande extends Decoration {
+    class Guirlande extends Decoration
+    {
         private $longueur;
 
-        function __construct($longueur, $color, $masse) {
+        function __construct($longueur, $color, $masse)
+        {
             $this->longueur = $longueur;
             $this->masse = $masse;
             $this->color = $color;
         }
 
-        function affichage() {
-            echo "* ".get_class($this)." ".$this->color." de ".$this->longueur."cm de long pesant ".$this->masse."g";
+        function affichage()
+        {
+            echo "* " . get_class($this) . " " . $this->color . " de " . $this->longueur . "cm de long pesant " . $this->masse . "g";
         }
     }
 
-    class Guirlande_Lumineuse extends Guirlande {
+    class Guirlande_Lumineuse extends Guirlande
+    {
         private $nb_led;
 
-        function __construct($nb_led, $color, $masse, $longueur) {
+        function __construct($nb_led, $color, $masse, $longueur)
+        {
             $this->nb_led = $nb_led;
             $this->masse = $masse;
             $this->color = $color;
             $this->longueur = $longueur;
         }
 
-        function affichage() {
-            echo "* ".get_class($this)." ".$this->color." de ".$this->longueur."cm de long, possedant ".$this->nb_led." lumières et pesant ".$this->masse."g";
+        function affichage()
+        {
+            echo "* " . get_class($this) . " " . $this->color . " de " . $this->longueur . "cm de long, possedant " . $this->nb_led . " lumières et pesant " . $this->masse . "g";
         }
     }
 
     error_reporting(E_ALL);
-ini_set("display_errors", 1);
+    ini_set("display_errors", 1);
 
     $s = new Sapin(1000);
     $s->add_decoration(new Boule(2, "bleue", 50));
-    $s->add_decoration(new Guirlande(1,"rouge", 50));
-    $s->add_decoration(new Guirlande_Lumineuse(5000, "multicolor", 500,5));
-    $s->add_decoration(new Boule(1,"blanche",10000));
+    $s->add_decoration(new Guirlande(1, "rouge", 50));
+    $s->add_decoration(new Guirlande_Lumineuse(5000, "multicolor", 500, 5));
+    $s->add_decoration(new Boule(1, "blanche", 10000));
     $s->affichage();
+
+    $test = true;
+    echo (bool)isset($test);
+    echo "---------------<br>";
+    echo "empty : {empty($test)}<br>";
+
+
 
     ?>
 

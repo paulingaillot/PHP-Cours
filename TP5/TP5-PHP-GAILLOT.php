@@ -185,10 +185,11 @@ $res = 0;
 <?php
 if(isset($_FILES['file1']) && isset($_FILES['file2'])){
     $test =false;
+    
     $test = move_uploaded_file($_FILES["file1"]["tmp_name"],"img/".$_FILES["file1"]["name"]);
 
     $test =move_uploaded_file($_FILES["file2"]["tmp_name"],"img/".$_FILES["file2"]["name"]);
-    if($test == false ) echo "ERROR";
+    if($test==false) echo "error $test";
 }
 
 $files2 = scandir("img/");
@@ -202,7 +203,7 @@ echo "<table>";
         echo "<td>name</td><td>".$id_file["name"]."</td>";
         echo "<td>type</td><td>".$id_file["type"]."</td>";
         echo "<td>tmp_name</td><td>".$id_file["tmp_name"]."</td>";
-        echo "<td>error</td><td>".$id_file["error"]."</td>";
+        echo "<td>error</td><td>".$id_file["errors"]."</td>";
         echo "<td>size</td><td>".$id_file["size"]."</td>";
         echo "<td>image</td><td><img src='img/".$file."'></img></td>";
         echo "</tr>";
