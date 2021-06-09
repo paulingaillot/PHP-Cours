@@ -9,6 +9,36 @@
             "name": "tp8",
             "database": "citations",
             "username": "postgres"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "tp9",
+            "database": "graphenotes",
+            "username": "postgres",
+            "password": "new_password"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "tp9ex2",
+            "database": "grapheactions",
+            "username": "postgres",
+            "password": "new_password"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "askForPassword": true,
+            "driver": "PostgreSQL",
+            "name": "porn",
+            "database": "porn",
+            "username": "postgres"
         }
     ]
 }
