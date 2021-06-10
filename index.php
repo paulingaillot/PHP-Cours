@@ -10,16 +10,16 @@
 <div class="center-div">
 <?php
 $files2 = scandir("./");
-
+$o=1;
+for($o=1; $o<sizeof($files2); $o++) {
 foreach ( $files2 as $file){
-  
-  if(strpos($file, "TP") !== false) {
+  if($file == "TP".$o) {
     echo "<a class=\"center-div\" href=\"",$file,"/",$file,"-PHP-GAILLOT.php\"><button class=\" center-div alert btn btn-primary \">";
     echo $file;
     echo " <span class=\"badge badge-light \">".(substr_count(fread(fopen("./".$file."/".$file."-PHP-GAILLOT.php", 'rb'), filesize("./".$file."/".$file."-PHP-GAILLOT.php")), "h2",)/2)." Exos</span>";
-    echo "</button></a><br />";
+    echo "</button></a><br>";
   }
-
+}
 }
 
 ?>
