@@ -39,6 +39,16 @@
             "name": "porn",
             "database": "porn",
             "username": "postgres"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "solde",
+            "database": "solde",
+            "username": "postgres",
+            "password": "new_password"
         }
     ]
 }

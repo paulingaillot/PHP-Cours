@@ -14,6 +14,7 @@ function view_admin()
     return $tab;
 }
 
+
 function disconnect($db)
 {
     session_destroy();
@@ -38,6 +39,8 @@ function delete($db)
     header("Location: ./viewadmin.php"); /* Redirection du navigateur */
     exit;
 }
+
+
 
 function register($db)
 {
