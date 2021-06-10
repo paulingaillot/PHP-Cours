@@ -6,14 +6,16 @@ session_start();
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 $db = dbConnect();
-function view_admin() {
+function view_admin()
+{
     $db = dbConnect();
     $tab = dbGetAllStudents($db, $_SESSION['user_id']);
 
     return $tab;
 }
 
-function disconnect($db) {
+function disconnect($db)
+{
     session_destroy();
 
     header("Location: ./index.php"); /* Redirection du navigateur */
@@ -23,10 +25,11 @@ function disconnect($db) {
 }
 
 
-function delete($db) {
+function delete($db)
+{
 
-   
-    $user_id =$_SESSION['user_id'];
+
+    $user_id = $_SESSION['user_id'];
     $nom = $_GET['nom'];
     $prenom = $_GET['prenom'];
 
@@ -78,31 +81,32 @@ function login($db)
 function createetu($db)
 {
 
-    $user_id =$_SESSION['user_id'];
+    $user_id = $_SESSION['user_id'];
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $note = $_POST['note'];
 
-    dbCreateStudent($db, $user_id, $nom, $prenom,$note);
+    dbCreateStudent($db, $user_id, $nom, $prenom, $note);
 
     header("Location: ./viewadmin.php"); /* Redirection du navigateur */
     exit;
 }
 
-function isConnected() {
-    if(isset($_SESSION['user_id'])) return true;
+function isConnected()
+{
+    if (isset($_SESSION['user_id'])) return true;
     else return false;
 }
 
 function modifyetu($db)
 {
 
-    $user_id =$_SESSION['user_id'];
+    $user_id = $_SESSION['user_id'];
     $nom = $_GET['nom'];
     $prenom = $_GET['prenom'];
     $note = $_POST['note'];
 
-    dbModifyStudent($db, $user_id, $nom, $prenom,$note);
+    dbModifyStudent($db, $user_id, $nom, $prenom, $note);
 
     header("Location: ./viewadmin.php"); /* Redirection du navigateur */
     exit;
