@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Title -->
+  <title>TP n°4 - WebSockets</title>
+
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous">
+
+  <!-- JS Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"
+    integrity="sha256-x3YZWtRjM8bJqf48dFAv/qmgL68SI4jqNWeSLMZaMGA=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+    
+  <!-- <script src="js/live.js" defer></script> -->
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="container">
+    <br>
+    <h1>TP n°4 <small>WebSockets</small></h1>
+    <hr>
+  </header>
+
+  <!-- Chat -->
+  <section id="chat" class="container">
+    <div class="card">
+      <div class="card-header">
+        <h4>Chat</h4>
+      </div>
+      <div class="card-body">
+          <textarea class="form-control" rows="10" id="chat-room" readonly></textarea>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Message ></span>
+            </div>
+            <input type="text" class="form-control" id="chat-message" placeholder="Entrez votre message" required
+              autofocus>
+          </div>
+          <br>
+          <button class="btn btn-success float-right" id="sendbut">
+            <i class="fa fa-paper-plane"></i> Envoyer
+          </button>
+      </div>
+    </div>
+  </section>
+  <script src="js/chatClient.js" defer></script>
+</body>
+
+</html>

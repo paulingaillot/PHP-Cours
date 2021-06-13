@@ -49,6 +49,26 @@
             "database": "solde",
             "username": "postgres",
             "password": "new_password"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "sondage",
+            "database": "sondage",
+            "username": "postgres",
+            "password": "new_password"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "tweetsdb",
+            "database": "tweetsdb",
+            "username": "postgres",
+            "password": "new_password"
         }
     ]
 }

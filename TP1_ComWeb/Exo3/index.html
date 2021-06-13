@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>TP n°1 - Exercice 3</title>
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous">
+
+    <!-- JS Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"
+      integrity="sha256-x3YZWtRjM8bJqf48dFAv/qmgL68SI4jqNWeSLMZaMGA=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="container">
+      <br>
+      <h1>TP n°1 <small>Exercice 3</small></h1>
+      <hr>
+    </header>
+
+    <!-- Errors -->
+    <section id="errors" class="container alert alert-danger" style="display: none">
+    </section>
+    
+    <!-- Polls  -->
+    <section class="container">
+      <div>
+        <h3>Séléctionnez un sondage</h3>
+        <select id="polls-select" class="form-control"></select>
+      </div>
+      <br>
+      <div id="poll" class="card">
+        <div class="card-header">
+          <h4 id="poll-title"></h4>
+          <span id="poll-badge" class="badge bg-secondary"></span>
+        </div>
+        <div class="card-body">
+          <ul class="list-group">
+            <li id="poll-option1" class="list-group-item">
+            </li>
+            <div id="progress-option1" class="progress-bar" role="progressbar" style="width: 25%; display: none;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+            <li id="poll-option2" class="list-group-item">
+            </li>
+            <div id="progress-option2" class="progress-bar" role="progressbar" style="width: 25%;  display: none;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+            <li id="poll-option3" class="list-group-item">
+            </li>
+            <div id="progress-option3" class="progress-bar" role="progressbar" style="width: 30%;  display: none;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <script type="text/javascript" src="js/ajax.js"></script>
+    <script type="text/javascript" src="js/polls.js"></script>
+  </body>
+</html>
