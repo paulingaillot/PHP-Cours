@@ -37,12 +37,12 @@ function ajaxRequest(type, url, callback) {
         switch (xhr.status) {
             case 200:
                 response = xhr.responseText;
-                callback(response);
+                callback(JSON.parse(response));
                 console.log(xhr.responseText);
                 break;
             case 201:
                 response = xhr.responseText;
-                callback(response);
+                callback(JSON.parse(response));
                 console.log(xhr.responseText);
                 break;
             default:
@@ -56,14 +56,30 @@ function ajaxRequest(type, url, callback) {
     
 }
 
+function display($response) {
+    let eur = document.getElementById("euro").value;
+    let option = document.getElementById("option").value;
+    console.log(option);
 
+    document.getElementById("dollar").style.display ="none";
+    document.getElementById("Yuan").style.display ="none";
+    document.getElementById("dirham").style.display ="none";
 
-function displayTimestamp(response) {
-    document.getElementById("timestamp").innerHTML = "<i class='fas fa-clock'></i> "+response;
+   if(option == "Dollars"){
+    document.getElementById("dollar").innerHTML = "<input type='text' class='form-control' value='"+(eur * $response["eur"]["usd"])+"' DISABLED>";
+    document.getElementById("dollar").style.display ="block";
+   } 
+   if(option == "Yuan") {
+    document.getElementById("Yuan").innerHTML = "<input type='text' class='form-control' value='"+eur * $response["eur"]["cny"]+"'DISABLED>";;
+    document.getElementById("Yuan").style.display ="block";
+   } 
+   if(option == "Dirham") {
+    document.getElementById("dirham").innerHTML = "<input type='text' class='form-control' value='"+eur * $response["eur"]["mad"]+"' DISABLED>";;
+    document.getElementById("dirham").style.display ="block";
+   } 
 }
 
-    setInterval(() => {
-        ajaxRequest('GET', "php/timestamp.php", displayTimestamp)  
-    }, 1000);
-
-
+let nut = document.getElementById("convertir");
+nut.addEventListener('click', function () {
+    ajaxRequest('GET', "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/eur.json", display);
+});

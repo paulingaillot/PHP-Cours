@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>TP Exam - Exo2</title>
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous">
+
+    <!-- JS Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"
+      integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"
+      integrity="sha256-x3YZWtRjM8bJqf48dFAv/qmgL68SI4jqNWeSLMZaMGA=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+    <!-- <script src="js/live.js" defer></script> -->
+    <script src="js/ajax.js" defer></script>
+    <script src="js/avi.js" defer></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="container">
+      <br>
+      <h1>TP Exam <small>Exo2</small></h1>
+      <hr>
+    </header>
+
+    <!-- Errors -->
+    <section id="errors" class="container alert alert-danger" style="display: none">
+    </section>
+    
+    <!-- Menu -->
+    <section class="container">
+      <div class="btn-group float-right" role="group">
+        <button id="all-button" type="button" class="btn btn-light">
+          <i class="fa fa-list-alt"> Elève</i>
+        </button>
+        <button id="my-button" type="button" class="btn btn-light">
+          <i class="fa fa-user"> Profs</i>
+        </button>
+      </div>
+    </section>
+    
+    <!-- Tweets  -->
+    <section>
+      <!-- Tweets list -->
+      <div id="avi" class="container">
+        <h3>Liste des commentaires</h3>
+      </div>
+      
+      <!-- Add tweet -->
+      <div id="avi-add" class="container">
+        <form>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Ajpouter ligne ></span>
+            </div>
+            <input type="text" class="form-control" id="avi1" placeholder="Entrez votre commentaire" autofocus required>
+            <label for="customRange3" class="form-label">Note</label>
+            <input type="range" id ="note1" class="form-range" min="0" max="20" step="1" id="customRange3" value="20">
+          </div>
+          <br>
+          <button type="submit" class="btn btn-success pull-right">
+            <i class="fa fa-paper-plane"></i> Envoyer
+          </button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

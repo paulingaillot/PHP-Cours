@@ -21,12 +21,6 @@ class chatBackend :
                             self.__tab.remove(user)
                 except:
                     print(" une erreur est survenu mais rien de bien mechant :)")
-                    
-                
-
-
-
-       
         
 
     def runServer(self) :

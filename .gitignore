@@ -1,3 +1,4 @@
 site/*
-*/constant.php
+./TP10/constant.php
+./TPExam/constant.php
 .gitignore
